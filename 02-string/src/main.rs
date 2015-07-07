@@ -1,12 +1,16 @@
-use std::thread;
-
 fn main() {
-    for num in 0..10 {
-        thread::spawn(move || {
-            let mut greeting_message = "Hello " + num.to_string();
-            println!("{}", greeting_message);
-            greeting_message = "pepito";
-            println!("{}", greeting_message);
-        });
-    }
+    let s = "Hello there!";
+    println!("{}",s);
+    let mut s2 = "Hello".to_string();
+    println!("{}",s2);
+    s2.push_str(" world!");
+    println!("{}",s2);
+    let x = 100;
+    let y = 200;
+    let z = sum(x,y);
+    println!("{}",z);
+}
+
+fn sum(a:u32, b:u32)->u32 {
+    return a+b;
 }
