@@ -1,0 +1,7 @@
+[package]
+name = "12-getopts"
+version = "0.1.0"
+authors = ["Juan López Rubio <j.lopez.r@gmail.com>"]
+
+[dependencies]
+getopts = "0.2.11"
