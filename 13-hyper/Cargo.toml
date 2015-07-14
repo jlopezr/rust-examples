@@ -1,0 +1,7 @@
+[package]
+name = "13-hyper"
+version = "0.1.0"
+authors = ["Juan López Rubio <j.lopez.r@gmail.com>"]
+
+[dependencies]
+hyper = "*"
