@@ -5,7 +5,7 @@ fn process() {
         thread::spawn(move || {
             println!("Thread start {}!",n);
             let mut _x = 0;
-            for _ in (0..5_000_001) {
+            for _ in 0..5_000_001 {
                 _x += 1
             }
             println!("Thread end {}!",n);
