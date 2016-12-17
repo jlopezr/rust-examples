@@ -56,7 +56,7 @@ fn main() {
 
     if !matches.free.is_empty() {
         //^ `matches.free` contains all the arguments that are not options.
-        let string = matches.free.connect(" ");
+        let string = matches.free.join(" ");
         println!("{}", string);
     }
 

@@ -7,11 +7,11 @@ use router::{Router};
 
 fn main() {
    let mut router = Router::new();
-   router.get("/", hello_world);
-   router.get("/:query", handler);
-   
+   router.get("/", hello_world, "hello");
+   router.get("/:query", handler, "query");
+
     fn hello_world(_: &mut Request) -> IronResult<Response> {
-        Ok(Response::with((status::Ok, "Hello World!")))
+        Ok(Response::with((status::Ok, "Hello World from Iron!")))
     }
 
    fn handler(req: &mut Request) -> IronResult<Response> {
@@ -20,6 +20,6 @@ fn main() {
         Ok(Response::with((status::Ok, *query)))
     }
 
+    println!("Listening on port 3000");
     Iron::new(router).http("localhost:3000").unwrap();
-    println!("On 3000");
 }
