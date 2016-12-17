@@ -17,14 +17,12 @@ fn main() {
     let vertex3 = Vertex { position: [ 0.5, -0.25] };
     let shape = vec![vertex1, vertex2, vertex3];
 
-    let vertex_buffer = glium::VertexBuffer::new(&display, shape);
+    let vertex_buffer = glium::VertexBuffer::new(&display, &shape).unwrap();
     let indices = glium::index::NoIndices(glium::index::PrimitiveType::TrianglesList);
 
     let vertex_shader_src = r#"
         #version 140
-
         in vec2 position;
-
         void main() {
             gl_Position = vec4(position, 0.0, 1.0);
         }
@@ -32,9 +30,7 @@ fn main() {
 
     let fragment_shader_src = r#"
         #version 140
-
         out vec4 color;
-
         void main() {
             color = vec4(1.0, 0.0, 0.0, 1.0);
         }
