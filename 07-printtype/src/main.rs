@@ -1,7 +1,4 @@
-#![feature(core)]
-
-use std::net::UdpSocket;
-use std::io::prelude::*;
+//#![feature(core)]
 
 fn print_type_of<T>(_: &T) -> () {
     let type_name =
@@ -12,7 +9,7 @@ fn print_type_of<T>(_: &T) -> () {
 }
 
 fn do_loop(v:&[u16]) -> () {
-    println!("HOLA");
+    println!("START");
     println!("LENGTH {}",v.len());
     for n in 0..v.len() {
         println!("a {}",v[n]);
@@ -20,7 +17,7 @@ fn do_loop(v:&[u16]) -> () {
     for n in v.iter() {
         println!("b {}",n);
     }
-    println!("ADIOS");
+    println!("END");
 }
 
 fn main() -> () {
