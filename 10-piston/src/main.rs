@@ -11,15 +11,26 @@ fn main() {
     .build()
     .unwrap();
 
+    let mut rotation: f64 = 0.0;
+
     while let Some(e) = window.next() {
-        window.draw_2d(&e, |c, g| {        
+
+        match e {
+               Event::Update(UpdateArgs { dt }) => {
+                   rotation += 3.0 * dt;
+               }
+               _ => {
+               }
+           }
+
+        window.draw_2d(&e, |c, g| {
             clear([0.0, 0.0, 0.0, 1.0], g);
             let center = c.transform.trans(300.0, 300.0);
             let square = rectangle::square(0.0, 0.0, 100.0);
             let red = [1.0, 0.0, 0.0, 1.0];
             // We translate the rectangle slightly so that it's centered;
             //otherwise only the top left corner would be centered
-            rectangle(red, square, center.trans(-50.0, -50.0), g);
+            rectangle(red, square, center.rot_rad(rotation).trans(-50.0, -50.0), g);
         });
     }
 }
