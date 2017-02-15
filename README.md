@@ -21,6 +21,7 @@ Some examples showing some RUST language features.
 * 14-iron: Routing over Hyper.
 * 15-tcp-echo: Typical TCP echo server. Uses RUST standard log system.
 * 16-json-over-udp: UDP server that accepts and returns JSON.
+* 17-call-from-c: Call a Rust library from a C program
 
 ## Not finished
 I haven't finished doing the Piston tutorial (http://piston-tutorial.logdown.com/) in the new Rust version.
