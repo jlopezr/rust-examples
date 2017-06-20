@@ -22,7 +22,7 @@ Some examples showing some RUST language features.
 * 15-tcp-echo: Typical TCP echo server. Uses RUST standard log system.
 * 16-json-over-udp: UDP server that accepts and returns JSON.
 * 17-call-from-c: Call a Rust library from a C program
-
+* 18-complex: simple complex number class with tests
 ## Not finished
 I haven't finished doing the Piston tutorial (http://piston-tutorial.logdown.com/) in the new Rust version.
 
