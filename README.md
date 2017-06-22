@@ -27,4 +27,4 @@ Some examples showing some RUST language features.
 I haven't finished doing the Piston tutorial (http://piston-tutorial.logdown.com/) in the new Rust version.
 
 ## Not working
-Currently, the examples 7 and 11 are not working. printtype uses a unstable feature and mio API changes to fast to keep up with it.
+Currently, the example 11 is not working. mio API changes to fast to keep up with it.

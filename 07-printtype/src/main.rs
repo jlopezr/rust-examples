@@ -1,4 +1,4 @@
-//#![feature(core)]
+#![feature(core_intrinsics)]
 
 fn print_type_of<T>(_: &T) -> () {
     let type_name =
