@@ -9,6 +9,9 @@ fi
 if [ "$1" == "update" ]; then
     COMMAND="update"
 fi
+if [ "$1" == "check" ]; then
+    COMMAND="check"
+fi
 CWD=`pwd`
 RESULT=""
 for dir in */; do
