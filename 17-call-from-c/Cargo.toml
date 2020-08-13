@@ -1,5 +1,5 @@
 [package]
-name = "17-call-from-c"
+name = "call-from-c"
 version = "0.1.0"
 authors = ["Juan López Rubio <j.lopez.r@gmail.com>"]
 

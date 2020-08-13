@@ -1,4 +1,4 @@
 [package]
-name = "05-format"
+name = "format"
 version = "0.1.0"
 authors = ["Juan López Rubio <j.lopez.r@gmail.com>"]

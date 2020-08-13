@@ -1,4 +1,4 @@
 [package]
-name = "07-printtype"
+name = "printtype"
 version = "0.1.0"
 authors = ["Juan López Rubio <j.lopez.r@gmail.com>"]
