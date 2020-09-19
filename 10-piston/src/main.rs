@@ -23,8 +23,8 @@ impl App {
 
         let square = rectangle::square(0.0, 0.0, 50.0);
         let rotation = self.rotation;
-        let (x, y) = ((args.width / 2) as f64,
-                      (args.height / 2) as f64);
+        let (x, y) = ((args.window_size[0] / 2.0) as f64,
+                      (args.window_size[1] / 2.0) as f64);
 
         self.gl.draw(args.viewport(), |c, gl| {
             // Clear the screen.
@@ -54,7 +54,7 @@ fn main() {
             "spinning-square",
             [200, 200]
         )
-        .opengl(opengl)
+        .graphics_api(opengl)
         .exit_on_esc(true)
         .build()
         .unwrap();
